@@ -1,0 +1,8 @@
+com.shatteredpixel.shatteredpixeldungeon.android-pngs-0 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\generated\res\pngs\release
+com.shatteredpixel.shatteredpixeldungeon.android-resValues-1 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\generated\res\resValues\release
+com.shatteredpixel.shatteredpixeldungeon.android-packageReleaseResources-2 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.shatteredpixel.shatteredpixeldungeon.android-packageReleaseResources-3 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.shatteredpixel.shatteredpixeldungeon.android-merged-not-compiled-resources-4 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\merged-not-compiled-resources\release
+com.shatteredpixel.shatteredpixeldungeon.android-release-5 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\merged_res\release\mergeReleaseResources
+com.shatteredpixel.shatteredpixeldungeon.android-main-6 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\src\main\res
+com.shatteredpixel.shatteredpixeldungeon.android-release-7 C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\src\release\res

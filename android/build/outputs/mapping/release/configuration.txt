@@ -1,0 +1,143 @@
+# The proguard configuration file for the following section is C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.5.2
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+#
+# Starting with version 2.2 of the Android plugin for Gradle, this file is distributed together with
+# the plugin and unpacked at build-time. The files in $ANDROID_HOME are no longer maintained and
+# will be ignored by new version of the Android plugin for Gradle.
+
+# Optimizations: If you don't want to optimize, use the proguard-android.txt configuration file
+# instead of this one, which turns off the optimization flags.
+-allowaccessmodification
+
+# Preserve some attributes that may be required for reflection.
+-keepattributes AnnotationDefault,
+                EnclosingMethod,
+                InnerClasses,
+                RuntimeVisibleAnnotations,
+                RuntimeVisibleParameterAnnotations,
+                RuntimeVisibleTypeAnnotations,
+                Signature
+
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class com.google.android.vending.licensing.ILicensingService
+-dontnote com.android.vending.licensing.ILicensingService
+-dontnote com.google.vending.licensing.ILicensingService
+-dontnote com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see https://www.guardsquare.com/manual/configuration/examples#native
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see https://www.guardsquare.com/manual/configuration/examples#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+
+# The support libraries contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version. We know about them, and they are safe.
+-dontnote android.support.**
+-dontnote androidx.**
+-dontwarn android.support.**
+-dontwarn androidx.**
+
+# Understand the @Keep support annotation.
+-keep class android.support.annotation.Keep
+
+-keep @android.support.annotation.Keep class * {*;}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <methods>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <fields>;
+}
+
+-keepclasseswithmembers class * {
+    @android.support.annotation.Keep <init>(...);
+}
+
+# These classes are duplicated between android.jar and org.apache.http.legacy.jar.
+-dontnote org.apache.http.**
+-dontnote android.net.http.**
+
+# These classes are duplicated between android.jar and core-lambda-stubs.jar.
+-dontnote java.lang.invoke.**
+
+# End of content from C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.5.2
+# The proguard configuration file for the following section is C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\proguard-rules.pro
+# retain these to support class references for the bundling and translation systems
+-keepnames class com.shatteredpixel.** { *; }
+-keepnames class com.watabou.** { *; }
+
+# keep members of classes that are instantiated via reflection
+-keepclassmembers class * extends com.watabou.glscripts.Script
+-keepclassmembers class * implements com.watabou.utils.Bundlable
+
+# retained to support meaningful stack traces
+# note that the mapping file must be referenced in order to make sense of line numbers
+# mapping file can be found in core/build/outputs/mapping after running a release build
+-keepattributes SourceFile,LineNumberTable
+
+# libGDX stuff
+-dontwarn android.support.**
+-dontwarn com.badlogic.gdx.backends.android.AndroidFragmentApplication
+-dontwarn com.badlogic.gdx.utils.GdxBuild
+-dontwarn com.badlogic.gdx.physics.box2d.utils.Box2DBuild
+-dontwarn com.badlogic.gdx.jnigen.BuildTarget*
+
+# needed for libGDX skin reflection used in text fields. Perhaps just don't use skin?
+-keep class com.badlogic.gdx.graphics.Color { *; }
+-keep class com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle { *; }
+
+# needed for libGDX controllers
+-keep class com.badlogic.gdx.controllers.android.AndroidControllers { *; }
+
+-keepclassmembers class com.badlogic.gdx.backends.android.AndroidInput* {
+    <init>(com.badlogic.gdx.Application, android.content.Context, java.lang.Object, com.badlogic.gdx.backends.android.AndroidApplicationConfiguration);
+}
+
+-keepclassmembers class com.badlogic.gdx.physics.box2d.World {
+    boolean contactFilter(long, long);
+    void    beginContact(long);
+    void    endContact(long);
+    void    preSolve(long, long);
+    void    postSolve(long, long);
+    boolean reportFixture(long);
+    float   reportRayFixture(long, float, float, float, float, float);
+}
+# End of content from C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\proguard-rules.pro
+# The proguard configuration file for the following section is C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
+-keep class com.shatteredpixel.shatteredpixeldungeon.android.AndroidBackupHandler { <init>(); }
+-keep class com.shatteredpixel.shatteredpixeldungeon.android.AndroidLauncher { <init>(); }
+-keep class com.shatteredpixel.shatteredpixeldungeon.android.AndroidMissingNativesHandler { <init>(); }
+
+# End of content from C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android\build\intermediates\aapt_proguard_file\release\processReleaseResources\aapt_rules.txt
+# The proguard configuration file for the following section is <unknown>
+
+# End of content from <unknown>

@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="C:\Users\sunwo\Desktop\shattered\shattered-pixel-dungeon-master (1)\shattered-pixel-dungeon-master\android"
+    name=":android"
+    type="APP"
+    maven="shattered-pixel-dungeon-master:android:2.5.4"
+    agpVersion="8.5.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\sunwo\AppData\Local\Android\Sdk\platforms\android-33\android.jar;C:\Users\sunwo\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
