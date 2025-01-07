@@ -138,7 +138,7 @@ public class TitleScene extends PixelScene {
 		add(btnPlay);
 
 		StyledButton btnSupport = new SupportButton(GREY_TR, Messages.get(this, "support"));
-		add(btnSupport);
+		//add(btnSupport);
 
 		StyledButton btnRankings = new StyledButton(GREY_TR,Messages.get(this, "rankings")){
 			@Override
